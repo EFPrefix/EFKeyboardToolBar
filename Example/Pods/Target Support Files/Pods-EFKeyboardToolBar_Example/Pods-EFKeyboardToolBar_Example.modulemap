@@ -1,0 +1,6 @@
+framework module Pods_EFKeyboardToolBar_Example {
+  umbrella header "Pods-EFKeyboardToolBar_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

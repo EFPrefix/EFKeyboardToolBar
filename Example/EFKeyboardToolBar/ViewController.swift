@@ -8,17 +8,36 @@
 
 import UIKit
 
+extension UIView {
+
+    func makeVisible() {
+        self.layer.borderColor = UIColor.gray.cgColor
+        self.layer.borderWidth = 0.5
+        self.layer.cornerRadius = 4
+    }
+}
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+        let padding: CGFloat = 10
+        let ctrlWidth = UIScreen.main.bounds.size.width - 2 * padding
 
+        let textField = UITextField()
+        textField.makeVisible()
+        textField.frame = CGRect(x: padding, y: 60, width: ctrlWidth, height: 100)
+        self.view.addSubview(textField)
+
+        let textView = UITextView()
+        textView.makeVisible()
+        textView.frame = CGRect(x: padding, y: 170, width: ctrlWidth, height: 300)
+        self.view.addSubview(textView)
+
+        let searchBar = UISearchBar()
+        textView.makeVisible()
+        searchBar.frame = CGRect(x: padding, y: 480, width: ctrlWidth, height: 100)
+        self.view.addSubview(searchBar)
+    }
 }
-
