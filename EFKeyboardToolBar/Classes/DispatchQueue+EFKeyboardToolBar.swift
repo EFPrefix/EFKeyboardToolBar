@@ -7,27 +7,23 @@
 
 import Foundation
 
-public extension DispatchQueue {
-
-    private static var _onceTracker = [String]()
+extension DispatchQueue {
 
     public class func once(token: String, block: () -> ()) {
+        struct Anchors {
+            static var onceTracker = [String]()
+        }
+        // 互斥锁加锁
         objc_sync_enter(self)
+        // 作用域结束时解锁
         defer {
             objc_sync_exit(self)
         }
-        if _onceTracker.contains(token) {
+
+        if Anchors.onceTracker.contains(token) {
             return
         }
-        _onceTracker.append(token)
+        Anchors.onceTracker.append(token)
         block()
-    }
-
-    func async(block: @escaping ()->()) {
-        self.async(execute: block)
-    }
-
-    func after(time: DispatchTime, block: @escaping ()->()) {
-        self.asyncAfter(deadline: time, execute: block)
     }
 }
