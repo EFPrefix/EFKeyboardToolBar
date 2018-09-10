@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'EFKeyboardToolBar_Example' do
+  pod 'EFKeyboardToolBar', :path => '../'
+
+  target 'EFKeyboardToolBar_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
