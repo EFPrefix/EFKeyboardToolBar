@@ -13,7 +13,7 @@ A keyboard toolBar in Swift, inspired by [KeyboardToolBar](https://github.com/Ji
 
 | Default | Custom |
 |:---------------------:|:---------------------:|
-![](https://raw.githubusercontent.com/EyreFree/EFKeyboardToolBar/master/Assets/default.png)|![](https://raw.githubusercontent.com/EyreFree/EFKeyboardToolBar/master/Assets/custom.gif)   
+![](https://github.com/EyreFree/EFKeyboardToolBar/blob/master/Assets/default.png?raw=true)|![](https://github.com/EyreFree/EFKeyboardToolBar/blob/master/Assets/custom.png?raw=true)   
 
 ## Example
 

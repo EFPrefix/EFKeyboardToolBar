@@ -13,7 +13,7 @@ EFKeyboardToolBar 是一个 Swift 编写的键盘工具条，受 [KeyboardToolBa
 
 | 默认 | 自定义 |
 |:---------------------:|:---------------------:|
-![](https://raw.githubusercontent.com/EyreFree/EFKeyboardToolBar/master/Assets/default.png)|![](https://raw.githubusercontent.com/EyreFree/EFKeyboardToolBar/master/Assets/custom.gif)   
+![](https://github.com/EyreFree/EFKeyboardToolBar/blob/master/Assets/default.png?raw=true)|![](https://github.com/EyreFree/EFKeyboardToolBar/blob/master/Assets/custom.png?raw=true)   
 
 ## 示例
 

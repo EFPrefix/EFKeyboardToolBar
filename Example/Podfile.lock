@@ -1,5 +1,5 @@
 PODS:
-  - EFKeyboardToolBar (0.0.1)
+  - EFKeyboardToolBar (1.0.0)
 
 DEPENDENCIES:
   - EFKeyboardToolBar (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  EFKeyboardToolBar: 1b202cdb8f34a81aaf92065df3768b389da96f1d
+  EFKeyboardToolBar: 5c14aaa1d8475b3871dd1413ba3b5f0c7c964656
 
 PODFILE CHECKSUM: 99ef2cd58d97c0d41fc2f7d2a2ba960676c627b2
 
