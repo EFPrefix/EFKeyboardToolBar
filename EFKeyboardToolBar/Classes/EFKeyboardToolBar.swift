@@ -28,12 +28,13 @@ import UIKit
 
 public class EFKeyboardToolBar: UIToolbar, UITextViewDelegate, UISearchBarDelegate {
 
-    public static var EFKeyboardToolBarWidth: CGFloat = UIScreen.main.bounds.size.width
-    public static var EFKeyboardToolBarHeight: CGFloat = 44
+    public static private(set) var config: EFKeyboardToolBarConfig = EFKeyboardToolBarConfig() {
+        didSet {
+            EFKeyboardToolBar.keyboardToolBar = nil
+        }
+    }
 
-    public static var toolBarContentView: EFKeyboardToolBarContentViewProtocol?
-
-    public var allRegisters: NSMutableDictionary?
+    public static var allRegisters: NSMutableDictionary?
 
     private static var _keyboardToolBar: EFKeyboardToolBar?
     public static var keyboardToolBar: EFKeyboardToolBar? {
@@ -51,15 +52,15 @@ public class EFKeyboardToolBar: UIToolbar, UITextViewDelegate, UISearchBarDelega
     }
 
     init() {
-        super.init(frame: CGRect(x: 0, y: 0, width: EFKeyboardToolBar.EFKeyboardToolBarWidth, height: EFKeyboardToolBar.EFKeyboardToolBarHeight))
-        self.barStyle = UIBarStyle.default
+        super.init(frame: CGRect(x: 0, y: 0, width: EFKeyboardToolBar.config.toolBarWidth, height: EFKeyboardToolBar.config.toolBarHeight))
+        self.barStyle = EFKeyboardToolBar.config.toolBarStyle
 
         DispatchQueue.main.async { [weak self] in
             if let strongSelf = self {
-                if nil == EFKeyboardToolBar.toolBarContentView {
-                    EFKeyboardToolBar.toolBarContentView = EFKeyboardToolBarDefaultContentView()
+                if nil == EFKeyboardToolBar.config.toolBarContentView {
+                    EFKeyboardToolBar.config.toolBarContentView = EFKeyboardToolBarDefaultContentView()
                 }
-                strongSelf.items = EFKeyboardToolBar.toolBarContentView?.toolBarItems()
+                strongSelf.items = EFKeyboardToolBar.config.toolBarContentView?.toolBarItems()
             }
         }
     }
@@ -68,31 +69,35 @@ public class EFKeyboardToolBar: UIToolbar, UITextViewDelegate, UISearchBarDelega
         fatalError("init(coder:) has not been implemented")
     }
 
+    public static func setConfig(config: EFKeyboardToolBarConfig) {
+        self.config = config
+    }
+
     // UITextField
     @objc func textFieldDidBeginWithTextField(textField: UITextField) {
-        EFKeyboardToolBar.toolBarContentView?.reSetText(ctrl: textField)
+        EFKeyboardToolBar.config.toolBarContentView?.reSetText(ctrl: textField)
     }
 
     @objc func textFieldDidChangeWithTextField(textField: UITextField) {
-        EFKeyboardToolBar.toolBarContentView?.reSetText(ctrl: textField)
+        EFKeyboardToolBar.config.toolBarContentView?.reSetText(ctrl: textField)
     }
 
     // UITextView
     public func textViewDidBeginEditing(_ textView: UITextView) {
-        EFKeyboardToolBar.toolBarContentView?.reSetText(ctrl: textView)
+        EFKeyboardToolBar.config.toolBarContentView?.reSetText(ctrl: textView)
     }
 
     public func textViewDidChange(_ textView: UITextView) {
-        EFKeyboardToolBar.toolBarContentView?.reSetText(ctrl: textView)
+        EFKeyboardToolBar.config.toolBarContentView?.reSetText(ctrl: textView)
     }
 
     // UISearchBar
     public func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        EFKeyboardToolBar.toolBarContentView?.reSetText(ctrl: searchBar)
+        EFKeyboardToolBar.config.toolBarContentView?.reSetText(ctrl: searchBar)
     }
 
     public func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        EFKeyboardToolBar.toolBarContentView?.reSetText(ctrl: searchBar)
+        EFKeyboardToolBar.config.toolBarContentView?.reSetText(ctrl: searchBar)
     }
 }
 
@@ -105,78 +110,78 @@ extension EFKeyboardToolBar {
     }
 
     static func registerKeyboardToolBarWithTextField(textField: UITextField) {
-        if EFKeyboardToolBar.keyboardToolBar?.allRegisters == nil {
-            keyboardToolBar?.allRegisters = NSMutableDictionary.init(capacity: 10)
+        if EFKeyboardToolBar.allRegisters == nil {
+            EFKeyboardToolBar.allRegisters = NSMutableDictionary.init(capacity: 10)
         }
         if textField.inputAccessoryView != keyboardToolBar {
             textField.inputAccessoryView = keyboardToolBar
             textField.addTarget(keyboardToolBar, action: #selector(textFieldDidBeginWithTextField(textField:)), for: UIControlEvents.editingDidBegin)
             textField.addTarget(keyboardToolBar, action: #selector(textFieldDidChangeWithTextField(textField:)), for: UIControlEvents.editingChanged)
-            keyboardToolBar?.allRegisters?.setValue(textField, forKey: String(format: "%p", arguments: [textField]))
+            EFKeyboardToolBar.allRegisters?.setValue(textField, forKey: String(format: "%p", arguments: [textField]))
         }
     }
 
     static func registerKeyboardToolBarWithTextView(textView: UITextView) {
-        if EFKeyboardToolBar.keyboardToolBar?.allRegisters == nil {
-            keyboardToolBar?.allRegisters = NSMutableDictionary.init(capacity: 10)
+        if EFKeyboardToolBar.allRegisters == nil {
+            EFKeyboardToolBar.allRegisters = NSMutableDictionary.init(capacity: 10)
         }
         if textView.inputAccessoryView != keyboardToolBar {
             textView.inputAccessoryView = keyboardToolBar
             textView.delegate = keyboardToolBar
-            keyboardToolBar?.allRegisters?.setValue(textView, forKey: String(format: "%p", arguments: [textView]))
+            EFKeyboardToolBar.allRegisters?.setValue(textView, forKey: String(format: "%p", arguments: [textView]))
         }
     }
 
     static func registerKeyboardToolBarWithSearchBar(searchBar: UISearchBar) {
-        if EFKeyboardToolBar.keyboardToolBar?.allRegisters == nil {
-            keyboardToolBar?.allRegisters = NSMutableDictionary.init(capacity: 10)
+        if EFKeyboardToolBar.allRegisters == nil {
+            EFKeyboardToolBar.allRegisters = NSMutableDictionary.init(capacity: 10)
         }
         if searchBar.inputAccessoryView != keyboardToolBar {
             searchBar.inputAccessoryView = keyboardToolBar
             searchBar.delegate = keyboardToolBar
-            keyboardToolBar?.allRegisters?.setValue(searchBar, forKey: String(format: "%p", arguments: [searchBar]))
+            EFKeyboardToolBar.allRegisters?.setValue(searchBar, forKey: String(format: "%p", arguments: [searchBar]))
         }
     }
 
     static func unregisterKeyboardToolBarWithTextField(textField: UITextField) {
-        if keyboardToolBar == nil || keyboardToolBar?.allRegisters?.count == 0 {
+        if keyboardToolBar == nil || EFKeyboardToolBar.allRegisters?.count == 0 {
             return
         }
-        let tempTextField = keyboardToolBar?.allRegisters?.object(forKey: String(format: "%p", arguments: [textField])) as? UITextField
+        let tempTextField = EFKeyboardToolBar.allRegisters?.object(forKey: String(format: "%p", arguments: [textField])) as? UITextField
         tempTextField?.inputAccessoryView = nil
         tempTextField?.removeTarget(keyboardToolBar, action: #selector(textFieldDidBeginWithTextField(textField:)), for: UIControlEvents.editingDidBegin)
         tempTextField?.removeTarget(keyboardToolBar, action: #selector(textFieldDidChangeWithTextField(textField:)), for: UIControlEvents.editingChanged)
-        keyboardToolBar?.allRegisters?.removeObject(forKey: String(format: "%p", arguments: [textField]))
-        if keyboardToolBar?.allRegisters?.count == 0 {
-            keyboardToolBar?.allRegisters = nil
+        EFKeyboardToolBar.allRegisters?.removeObject(forKey: String(format: "%p", arguments: [textField]))
+        if EFKeyboardToolBar.allRegisters?.count == 0 {
+            EFKeyboardToolBar.allRegisters = nil
             keyboardToolBar = nil
         }
     }
 
     static func unregisterKeyboardToolBarWithTextView(textView: UITextView) {
-        if keyboardToolBar == nil || keyboardToolBar?.allRegisters?.count == 0 {
+        if keyboardToolBar == nil || EFKeyboardToolBar.allRegisters?.count == 0 {
             return
         }
-        let tempTextView = keyboardToolBar?.allRegisters?.object(forKey: String(format: "%p", arguments: [textView])) as? UITextView
+        let tempTextView = EFKeyboardToolBar.allRegisters?.object(forKey: String(format: "%p", arguments: [textView])) as? UITextView
         tempTextView?.inputAccessoryView = nil
         textView.delegate = nil
-        keyboardToolBar?.allRegisters?.removeObject(forKey: String(format: "%p", arguments: [textView]))
-        if keyboardToolBar?.allRegisters?.count == 0 {
-            keyboardToolBar?.allRegisters = nil
+        EFKeyboardToolBar.allRegisters?.removeObject(forKey: String(format: "%p", arguments: [textView]))
+        if EFKeyboardToolBar.allRegisters?.count == 0 {
+            EFKeyboardToolBar.allRegisters = nil
             keyboardToolBar = nil
         }
     }
 
     static func unregisterKeyboardToolBarWithSearchBar(searchBar: UISearchBar) {
-        if keyboardToolBar == nil || keyboardToolBar?.allRegisters?.count == 0 {
+        if keyboardToolBar == nil || EFKeyboardToolBar.allRegisters?.count == 0 {
             return
         }
-        let tempSearchBar = keyboardToolBar?.allRegisters?.object(forKey: String(format: "%p", arguments: [searchBar])) as? UISearchBar
+        let tempSearchBar = EFKeyboardToolBar.allRegisters?.object(forKey: String(format: "%p", arguments: [searchBar])) as? UISearchBar
         tempSearchBar?.inputAccessoryView = nil
         searchBar.delegate = nil
-        keyboardToolBar?.allRegisters?.removeObject(forKey: String(format: "%p", arguments: [searchBar]))
-        if keyboardToolBar?.allRegisters?.count == 0 {
-            keyboardToolBar?.allRegisters = nil
+        EFKeyboardToolBar.allRegisters?.removeObject(forKey: String(format: "%p", arguments: [searchBar]))
+        if EFKeyboardToolBar.allRegisters?.count == 0 {
+            EFKeyboardToolBar.allRegisters = nil
             keyboardToolBar = nil
         }
     }

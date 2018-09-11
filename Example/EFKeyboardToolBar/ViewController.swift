@@ -55,6 +55,7 @@ class ViewController: UIViewController {
     func addInputCtrls() {
         let textField = UITextField()
         textField.makeVisible()
+        textField.textColor = UIColor.blue
         textField.attributedPlaceholder = NSAttributedString(
             string: "出来吧，小火龙！", attributes: [NSAttributedStringKey.foregroundColor : UIColor.lightGray]
         )
@@ -85,16 +86,16 @@ class ViewController: UIViewController {
     @objc func buttonClicked(button: UIButton) {
         switch button.title(for: .normal) ?? "" {
         case "自定义样式":
-            EFKeyboardToolBar.EFKeyboardToolBarHeight = 60
-            EFKeyboardToolBar.toolBarContentView = EFKeyboardToolBarCustomContentView()
-            EFKeyboardToolBar.keyboardToolBar = nil
-            EFKeyboardToolBar.keyboardToolBar?.backgroundColor = UIColor.white
+            let newConfit = EFKeyboardToolBarConfig()
+            newConfit.toolBarHeight = 60
+            newConfit.toolBarContentView = EFKeyboardToolBarCustomContentView()
+            EFKeyboardToolBar.setConfig(config: newConfit)
             break
         default:
-            EFKeyboardToolBar.EFKeyboardToolBarHeight = 44
-            EFKeyboardToolBar.toolBarContentView = EFKeyboardToolBarDefaultContentView()
-            EFKeyboardToolBar.keyboardToolBar = nil
-            EFKeyboardToolBar.keyboardToolBar?.backgroundColor = UIColor.white
+            let newConfit = EFKeyboardToolBarConfig()
+            newConfit.toolBarHeight = 44
+            newConfit.toolBarContentView = EFKeyboardToolBarDefaultContentView()
+            EFKeyboardToolBar.setConfig(config: newConfit)
             break
         }
         removeInputCtrls()
