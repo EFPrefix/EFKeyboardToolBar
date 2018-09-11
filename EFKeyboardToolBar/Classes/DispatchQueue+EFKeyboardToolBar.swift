@@ -32,9 +32,7 @@ extension DispatchQueue {
         struct Anchors {
             static var onceTracker = [String]()
         }
-        // 互斥锁加锁
         objc_sync_enter(self)
-        // 作用域结束时解锁
         defer {
             objc_sync_exit(self)
         }

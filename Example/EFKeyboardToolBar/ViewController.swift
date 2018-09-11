@@ -27,6 +27,9 @@ class ViewController: UIViewController {
 
         let textField = UITextField()
         textField.makeVisible()
+        textField.attributedPlaceholder = NSAttributedString(
+            string: "出来吧，小火龙！", attributes: [NSAttributedStringKey.foregroundColor : UIColor.lightGray]
+        )
         textField.frame = CGRect(x: padding, y: 60, width: ctrlWidth, height: 100)
         self.view.addSubview(textField)
 
@@ -36,7 +39,8 @@ class ViewController: UIViewController {
         self.view.addSubview(textView)
 
         let searchBar = UISearchBar()
-        textView.makeVisible()
+        searchBar.makeVisible()
+        searchBar.placeholder = "乱序切割"
         searchBar.frame = CGRect(x: padding, y: 480, width: ctrlWidth, height: 100)
         self.view.addSubview(searchBar)
     }
