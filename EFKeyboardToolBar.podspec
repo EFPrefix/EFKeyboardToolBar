@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'EFKeyboardToolBar'
-  s.version          = '0.0.1'
+  s.version          = '1.0.0'
   s.summary          = 'A keyboard toolBar in Swift.'
 
   s.description      = <<-DESC
