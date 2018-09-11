@@ -1,8 +1,8 @@
 //
-//  DispatchQueue+EFKeyboardToolBar.swift
+//  String+EFKeyboardToolBar.swift
 //  EFKeyboardToolBar
 //
-//  Created by EyreFree on 2018/9/10.
+//  Created by EyreFree on 2018/9/11.
 //
 //  Copyright (c) 2018 EyreFree <eyrefree@eyrefree.org>
 //
@@ -26,23 +26,16 @@
 
 import Foundation
 
-extension DispatchQueue {
+extension String {
 
-    public class func once(token: String, block: () -> ()) {
-        struct Anchors {
-            static var onceTracker = [String]()
-        }
-        // 互斥锁加锁
-        objc_sync_enter(self)
-        // 作用域结束时解锁
-        defer {
-            objc_sync_exit(self)
-        }
-
-        if Anchors.onceTracker.contains(token) {
-            return
-        }
-        Anchors.onceTracker.append(token)
-        block()
+    public func widthFor(font: UIFont) -> CGFloat {
+        let attribute = [NSAttributedStringKey.font: font]
+        let size = (self as NSString).boundingRect(
+            with: CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude),
+            options: [NSStringDrawingOptions.truncatesLastVisibleLine, NSStringDrawingOptions.usesLineFragmentOrigin, NSStringDrawingOptions.usesFontLeading],
+            attributes: attribute,
+            context: nil
+        )
+        return size.width
     }
 }

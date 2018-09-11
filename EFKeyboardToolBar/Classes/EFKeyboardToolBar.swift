@@ -1,3 +1,28 @@
+//
+//  EFKeyboardToolBar.swift
+//  EFKeyboardToolBar
+//
+//  Created by EyreFree on 2018/9/10.
+//
+//  Copyright (c) 2018 EyreFree <eyrefree@eyrefree.org>
+//
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
+//
+//  The above copyright notice and this permission notice shall be included in
+//  all copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//  THE SOFTWARE.
 
 import UIKit
 
@@ -11,7 +36,145 @@ public class EFKeyboardToolBar: UIToolbar, UITextViewDelegate, UISearchBarDelega
     var scrollView: UIScrollView?
     var allRegisters: NSMutableDictionary?
 
-    static var keyboardToolBar: EFKeyboardToolBar? = nil
+    private static var _keyboardToolBar: EFKeyboardToolBar?
+    private static var keyboardToolBar: EFKeyboardToolBar? {
+        get {
+            if let _keyboardToolBar = _keyboardToolBar {
+                return _keyboardToolBar
+            }
+            let new_keyboardToolBar = EFKeyboardToolBar()
+            _keyboardToolBar = new_keyboardToolBar
+            return new_keyboardToolBar
+        }
+        set {
+            _keyboardToolBar = newValue
+        }
+    }
+
+    init() {
+        super.init(frame: CGRect(x: 0, y: 0, width: KeyboardToolBarWidth, height: KeyboardToolBarHeight))
+
+        DispatchQueue.main.async { [weak self] in
+            if let strongSelf = self {
+                strongSelf.barStyle = UIBarStyle.default
+
+                let scrollView = UIScrollView.init(frame: CGRect(x: 0, y: 0, width: KeyboardScrollViewWidth, height: KeyboardToolBarHeight))
+                scrollView.backgroundColor = UIColor.clear
+                scrollView.contentSize = CGSize(width: KeyboardScrollViewWidth, height: KeyboardToolBarHeight)
+                scrollView.bounces = false
+                strongSelf.scrollView = scrollView
+
+                let toolBarTextField = UITextField.init(frame: CGRect(x: 0, y: 0, width: KeyboardScrollViewWidth, height: KeyboardToolBarHeight))
+                toolBarTextField.textAlignment = NSTextAlignment.left
+                toolBarTextField.isUserInteractionEnabled = false
+                scrollView.addSubview(toolBarTextField)
+                strongSelf.toolBarTextField = toolBarTextField
+
+                let textFieldItem: UIBarButtonItem = UIBarButtonItem(customView: scrollView)
+                let finishBtnItem: UIBarButtonItem = UIBarButtonItem.init(title: "完成", style: UIBarButtonItemStyle.done, target: strongSelf, action: #selector(strongSelf.resignKeyboard))
+                let buttonsArray = [textFieldItem, finishBtnItem]
+                strongSelf.items = buttonsArray
+            }
+        }
+    }
+
+    required public init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    // UITextField
+    @objc func textFieldDidBeginWithTextField(textField: UITextField) {
+        reSetTextField(textField: textField)
+    }
+
+    @objc func textFieldDidChangeWithTextField(textField: UITextField) {
+        reSetTextField(textField: textField)
+    }
+
+    // UITextView
+    public func textViewDidBeginEditing(_ textView: UITextView) {
+        reSetTextView(textView: textView)
+    }
+
+    public func textViewDidChange(_ textView: UITextView) {
+        reSetTextView(textView: textView)
+    }
+
+    // UISearchBar
+    public func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        reSetSearchBar(searchBar: searchBar)
+    }
+
+    public func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        reSetSearchBar(searchBar: searchBar)
+    }
+
+    func reSetTextField(textField: UITextField) {
+        let tempTextField = EFKeyboardToolBar.keyboardToolBar?.allRegisters?.object(forKey: String(format: "%p", arguments: [textField])) as? UITextField
+        let textWidth = (tempTextField?.text ?? "").widthFor(font: EFKeyboardToolBar.keyboardToolBar?.toolBarTextField?.font ?? UIFont.systemFont(ofSize: 14))
+        if textWidth > KeyboardScrollViewWidth {
+            EFKeyboardToolBar.keyboardToolBar?.toolBarTextField?.frame = CGRect(x: 0, y: 0, width: textWidth, height: KeyboardToolBarHeight)
+            EFKeyboardToolBar.keyboardToolBar?.scrollView?.contentSize = CGSize(width: textWidth, height: KeyboardToolBarHeight)
+            self.scrollView?.scrollRectToVisible(CGRect(x: textWidth - KeyboardScrollViewWidth, y: 0, width: KeyboardScrollViewWidth, height: KeyboardToolBarHeight), animated: true)
+        } else {
+            EFKeyboardToolBar.keyboardToolBar?.toolBarTextField?.frame = CGRect(x: 0, y: 0, width: KeyboardScrollViewWidth, height: KeyboardToolBarHeight)
+            EFKeyboardToolBar.keyboardToolBar?.scrollView?.contentSize = CGSize(width: KeyboardScrollViewWidth, height: KeyboardToolBarHeight)
+        }
+        EFKeyboardToolBar.keyboardToolBar?.toolBarTextField?.text = tempTextField?.text
+        EFKeyboardToolBar.keyboardToolBar?.toolBarTextField?.textColor = tempTextField?.textColor
+        EFKeyboardToolBar.keyboardToolBar?.toolBarTextField?.isSecureTextEntry = tempTextField?.isSecureTextEntry ?? false
+        if let placeholder = tempTextField?.placeholder {
+            let attribute = textField.attributedPlaceholder
+            let dictionary = attribute?.attributes(at: 0, effectiveRange: nil)
+            EFKeyboardToolBar.keyboardToolBar?.toolBarTextField?.attributedPlaceholder = NSAttributedString(
+                string: placeholder,
+                attributes: [NSAttributedStringKey.foregroundColor : dictionary?[NSAttributedStringKey.foregroundColor] ?? UIColor.black]
+            )
+        }
+    }
+
+    func reSetTextView(textView: UITextView) {
+        let tempTextView = EFKeyboardToolBar.keyboardToolBar?.allRegisters?.object(forKey: String(format: "%p", arguments: [textView])) as? UITextView
+        let textWidth = (tempTextView?.text ?? "").widthFor(font: EFKeyboardToolBar.keyboardToolBar?.toolBarTextField?.font ?? UIFont.systemFont(ofSize: 14))
+        if textWidth > KeyboardScrollViewWidth {
+            EFKeyboardToolBar.keyboardToolBar?.toolBarTextField?.frame = CGRect(x: 0, y: 0, width: textWidth, height: KeyboardToolBarHeight)
+            EFKeyboardToolBar.keyboardToolBar?.scrollView?.contentSize = CGSize(width: textWidth, height: KeyboardToolBarHeight)
+            self.scrollView?.scrollRectToVisible(CGRect(x: textWidth - KeyboardScrollViewWidth, y: 0, width: KeyboardScrollViewWidth, height: KeyboardToolBarHeight), animated: true)
+        } else {
+            EFKeyboardToolBar.keyboardToolBar?.toolBarTextField?.frame = CGRect(x: 0, y: 0, width: KeyboardScrollViewWidth, height: KeyboardToolBarHeight)
+            EFKeyboardToolBar.keyboardToolBar?.scrollView?.contentSize = CGSize(width: KeyboardScrollViewWidth, height: KeyboardToolBarHeight)
+        }
+        EFKeyboardToolBar.keyboardToolBar?.toolBarTextField?.text = tempTextView?.text
+        EFKeyboardToolBar.keyboardToolBar?.toolBarTextField?.textColor = tempTextView?.textColor
+        EFKeyboardToolBar.keyboardToolBar?.toolBarTextField?.isSecureTextEntry = false
+        EFKeyboardToolBar.keyboardToolBar?.toolBarTextField?.attributedPlaceholder = nil
+    }
+
+    func reSetSearchBar(searchBar: UISearchBar) {
+        let tempSearchBar = EFKeyboardToolBar.keyboardToolBar?.allRegisters?.object(forKey: String(format: "%p", arguments: [searchBar])) as? UISearchBar
+        let textWidth = (tempSearchBar?.text ?? "").widthFor(font: EFKeyboardToolBar.keyboardToolBar?.toolBarTextField?.font ?? UIFont.systemFont(ofSize: 14))
+        if textWidth > KeyboardScrollViewWidth {
+            EFKeyboardToolBar.keyboardToolBar?.toolBarTextField?.frame = CGRect(x: 0, y: 0, width: textWidth, height: KeyboardToolBarHeight)
+            EFKeyboardToolBar.keyboardToolBar?.scrollView?.contentSize = CGSize(width: textWidth, height: KeyboardToolBarHeight)
+            self.scrollView?.scrollRectToVisible(CGRect(x: textWidth - KeyboardScrollViewWidth, y: 0, width: KeyboardScrollViewWidth, height: KeyboardToolBarHeight), animated: true)
+        } else {
+            EFKeyboardToolBar.keyboardToolBar?.toolBarTextField?.frame = CGRect(x: 0, y: 0, width: KeyboardScrollViewWidth, height: KeyboardToolBarHeight)
+            EFKeyboardToolBar.keyboardToolBar?.scrollView?.contentSize = CGSize(width: KeyboardScrollViewWidth, height: KeyboardToolBarHeight)
+        }
+        EFKeyboardToolBar.keyboardToolBar?.toolBarTextField?.text = tempSearchBar?.text
+        EFKeyboardToolBar.keyboardToolBar?.toolBarTextField?.isSecureTextEntry = false
+        EFKeyboardToolBar.keyboardToolBar?.toolBarTextField?.attributedPlaceholder = nil
+        EFKeyboardToolBar.keyboardToolBar?.toolBarTextField?.placeholder = tempSearchBar?.placeholder
+    }
+
+    @objc func resignKeyboard() {
+        EFKeyboardToolBar.keyboardToolBar?.toolBarTextField?.text = ""
+        EFKeyboardToolBar.keyboardToolBar?.toolBarTextField?.placeholder = ""
+        UIApplication.shared.keyWindow?.endEditing(true)
+    }
+}
+
+extension EFKeyboardToolBar {
 
     public static func enableEFKeyboardToolBar() {
         UITextField.enableEFKeyboardToolBar()
@@ -20,7 +183,7 @@ public class EFKeyboardToolBar: UIToolbar, UITextViewDelegate, UISearchBarDelega
     }
 
     static func registerKeyboardToolBarWithTextField(textField: UITextField) {
-        if EFKeyboardToolBar.shareKeyboardToolBar().allRegisters == nil {
+        if EFKeyboardToolBar.keyboardToolBar?.allRegisters == nil {
             keyboardToolBar?.allRegisters = NSMutableDictionary.init(capacity: 10)
         }
         if textField.inputAccessoryView != keyboardToolBar {
@@ -32,7 +195,7 @@ public class EFKeyboardToolBar: UIToolbar, UITextViewDelegate, UISearchBarDelega
     }
 
     static func registerKeyboardToolBarWithTextView(textView: UITextView) {
-        if EFKeyboardToolBar.shareKeyboardToolBar().allRegisters == nil {
+        if EFKeyboardToolBar.keyboardToolBar?.allRegisters == nil {
             keyboardToolBar?.allRegisters = NSMutableDictionary.init(capacity: 10)
         }
         if textView.inputAccessoryView != keyboardToolBar {
@@ -43,7 +206,7 @@ public class EFKeyboardToolBar: UIToolbar, UITextViewDelegate, UISearchBarDelega
     }
 
     static func registerKeyboardToolBarWithSearchBar(searchBar: UISearchBar) {
-        if EFKeyboardToolBar.shareKeyboardToolBar().allRegisters == nil {
+        if EFKeyboardToolBar.keyboardToolBar?.allRegisters == nil {
             keyboardToolBar?.allRegisters = NSMutableDictionary.init(capacity: 10)
         }
         if searchBar.inputAccessoryView != keyboardToolBar {
@@ -94,132 +257,5 @@ public class EFKeyboardToolBar: UIToolbar, UITextViewDelegate, UISearchBarDelega
             keyboardToolBar?.allRegisters = nil
             keyboardToolBar = nil
         }
-    }
-
-    static func shareKeyboardToolBar() -> EFKeyboardToolBar {
-        if keyboardToolBar == nil {
-            keyboardToolBar = EFKeyboardToolBar.init(frame: CGRect(x: 0, y: 0, width: KeyboardToolBarWidth, height: KeyboardToolBarHeight))
-            keyboardToolBar?.barStyle = UIBarStyle.default
-
-            let scrollView = UIScrollView.init(frame: CGRect(x: 0, y: 0, width: KeyboardScrollViewWidth, height: KeyboardToolBarHeight))
-            scrollView.backgroundColor = UIColor.clear
-            scrollView.contentSize = CGSize(width: KeyboardScrollViewWidth, height: KeyboardToolBarHeight)
-            scrollView.bounces = false
-            keyboardToolBar?.scrollView = scrollView
-
-            let toolBarTextField = UITextField.init(frame: CGRect(x: 0, y: 0, width: KeyboardScrollViewWidth, height: KeyboardToolBarHeight))
-            toolBarTextField.textAlignment = NSTextAlignment.left
-            toolBarTextField.isUserInteractionEnabled = false
-            scrollView.addSubview(toolBarTextField)
-            keyboardToolBar?.toolBarTextField = toolBarTextField
-
-            let textFieldItem: UIBarButtonItem = UIBarButtonItem(customView: scrollView)
-            let finishBtnItem: UIBarButtonItem = UIBarButtonItem.init(title: "完成", style: UIBarButtonItemStyle.done, target: keyboardToolBar, action: #selector(resignKeyboard))
-            let buttonsArray = [textFieldItem, finishBtnItem]
-            keyboardToolBar?.items = buttonsArray
-        }
-        return keyboardToolBar!
-    }
-
-    // UITextField
-    @objc func textFieldDidBeginWithTextField(textField: UITextField) {
-        reSetTextField(textField: textField)
-    }
-
-    @objc func textFieldDidChangeWithTextField(textField: UITextField) {
-        reSetTextField(textField: textField)
-    }
-
-    // UITextView
-    public func textViewDidBeginEditing(_ textView: UITextView) {
-        reSetTextView(textView: textView)
-    }
-
-    public func textViewDidChange(_ textView: UITextView) {
-        reSetTextView(textView: textView)
-    }
-
-    // UISearchBar
-    public func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        reSetSearchBar(searchBar: searchBar)
-    }
-
-    public func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        reSetSearchBar(searchBar: searchBar)
-    }
-
-    func reSetTextField(textField: UITextField) {
-        let tempTextField = EFKeyboardToolBar.keyboardToolBar?.allRegisters?.object(forKey: String(format: "%p", arguments: [textField])) as? UITextField
-        let textWidth = EFKeyboardToolBar.widthForString(str: tempTextField?.text ?? "", font: EFKeyboardToolBar.keyboardToolBar?.toolBarTextField?.font ?? UIFont.systemFont(ofSize: 14))
-        if textWidth > KeyboardScrollViewWidth {
-            EFKeyboardToolBar.keyboardToolBar?.toolBarTextField?.frame = CGRect(x: 0, y: 0, width: textWidth, height: KeyboardToolBarHeight)
-            EFKeyboardToolBar.keyboardToolBar?.scrollView?.contentSize = CGSize(width: textWidth, height: KeyboardToolBarHeight)
-            self.scrollView?.scrollRectToVisible(CGRect(x: textWidth - KeyboardScrollViewWidth, y: 0, width: KeyboardScrollViewWidth, height: KeyboardToolBarHeight), animated: true)
-        } else {
-            EFKeyboardToolBar.keyboardToolBar?.toolBarTextField?.frame = CGRect(x: 0, y: 0, width: KeyboardScrollViewWidth, height: KeyboardToolBarHeight)
-            EFKeyboardToolBar.keyboardToolBar?.scrollView?.contentSize = CGSize(width: KeyboardScrollViewWidth, height: KeyboardToolBarHeight)
-        }
-        EFKeyboardToolBar.keyboardToolBar?.toolBarTextField?.text = tempTextField?.text
-        EFKeyboardToolBar.keyboardToolBar?.toolBarTextField?.textColor = tempTextField?.textColor
-        EFKeyboardToolBar.keyboardToolBar?.toolBarTextField?.isSecureTextEntry = tempTextField?.isSecureTextEntry ?? false
-        if let placeholder = tempTextField?.placeholder {
-            let attribute = textField.attributedPlaceholder
-            let dictionary = attribute?.attributes(at: 0, effectiveRange: nil)
-            EFKeyboardToolBar.keyboardToolBar?.toolBarTextField?.attributedPlaceholder = NSAttributedString(
-                string: placeholder,
-                attributes: [NSAttributedStringKey.foregroundColor : dictionary?[NSAttributedStringKey.foregroundColor] ?? UIColor.black]
-            )
-        }
-    }
-
-    func reSetTextView(textView: UITextView) {
-        let tempTextView = EFKeyboardToolBar.keyboardToolBar?.allRegisters?.object(forKey: String(format: "%p", arguments: [textView])) as? UITextView
-        let textWidth = EFKeyboardToolBar.widthForString(str: tempTextView?.text ?? "", font: EFKeyboardToolBar.keyboardToolBar?.toolBarTextField?.font ?? UIFont.systemFont(ofSize: 14))
-        if textWidth > KeyboardScrollViewWidth {
-            EFKeyboardToolBar.keyboardToolBar?.toolBarTextField?.frame = CGRect(x: 0, y: 0, width: textWidth, height: KeyboardToolBarHeight)
-            EFKeyboardToolBar.keyboardToolBar?.scrollView?.contentSize = CGSize(width: textWidth, height: KeyboardToolBarHeight)
-            self.scrollView?.scrollRectToVisible(CGRect(x: textWidth - KeyboardScrollViewWidth, y: 0, width: KeyboardScrollViewWidth, height: KeyboardToolBarHeight), animated: true)
-        } else {
-            EFKeyboardToolBar.keyboardToolBar?.toolBarTextField?.frame = CGRect(x: 0, y: 0, width: KeyboardScrollViewWidth, height: KeyboardToolBarHeight)
-            EFKeyboardToolBar.keyboardToolBar?.scrollView?.contentSize = CGSize(width: KeyboardScrollViewWidth, height: KeyboardToolBarHeight)
-        }
-        EFKeyboardToolBar.keyboardToolBar?.toolBarTextField?.text = tempTextView?.text
-        EFKeyboardToolBar.keyboardToolBar?.toolBarTextField?.textColor = tempTextView?.textColor
-        EFKeyboardToolBar.keyboardToolBar?.toolBarTextField?.isSecureTextEntry = false
-        EFKeyboardToolBar.keyboardToolBar?.toolBarTextField?.attributedPlaceholder = nil
-    }
-
-    func reSetSearchBar(searchBar: UISearchBar) {
-        let tempSearchBar = EFKeyboardToolBar.keyboardToolBar?.allRegisters?.object(forKey: String(format: "%p", arguments: [searchBar])) as? UISearchBar
-        let textWidth = EFKeyboardToolBar.widthForString(str: tempSearchBar?.text ?? "", font: EFKeyboardToolBar.keyboardToolBar?.toolBarTextField?.font ?? UIFont.systemFont(ofSize: 14))
-        if textWidth > KeyboardScrollViewWidth {
-            EFKeyboardToolBar.keyboardToolBar?.toolBarTextField?.frame = CGRect(x: 0, y: 0, width: textWidth, height: KeyboardToolBarHeight)
-            EFKeyboardToolBar.keyboardToolBar?.scrollView?.contentSize = CGSize(width: textWidth, height: KeyboardToolBarHeight)
-            self.scrollView?.scrollRectToVisible(CGRect(x: textWidth - KeyboardScrollViewWidth, y: 0, width: KeyboardScrollViewWidth, height: KeyboardToolBarHeight), animated: true)
-        } else {
-            EFKeyboardToolBar.keyboardToolBar?.toolBarTextField?.frame = CGRect(x: 0, y: 0, width: KeyboardScrollViewWidth, height: KeyboardToolBarHeight)
-            EFKeyboardToolBar.keyboardToolBar?.scrollView?.contentSize = CGSize(width: KeyboardScrollViewWidth, height: KeyboardToolBarHeight)
-        }
-        EFKeyboardToolBar.keyboardToolBar?.toolBarTextField?.text = tempSearchBar?.text
-        EFKeyboardToolBar.keyboardToolBar?.toolBarTextField?.isSecureTextEntry = false
-        EFKeyboardToolBar.keyboardToolBar?.toolBarTextField?.attributedPlaceholder = nil
-        EFKeyboardToolBar.keyboardToolBar?.toolBarTextField?.placeholder = tempSearchBar?.placeholder
-    }
-
-    @objc func resignKeyboard() {
-        EFKeyboardToolBar.keyboardToolBar?.toolBarTextField?.text = ""
-        EFKeyboardToolBar.keyboardToolBar?.toolBarTextField?.placeholder = ""
-        UIApplication.shared.keyWindow?.endEditing(true)
-    }
-
-    static func widthForString(str: String, font: UIFont) -> CGFloat {
-        let attribute = [NSAttributedStringKey.font: font]
-        let size = (str as NSString).boundingRect(
-            with: CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude),
-            options: [NSStringDrawingOptions.truncatesLastVisibleLine, NSStringDrawingOptions.usesLineFragmentOrigin, NSStringDrawingOptions.usesFontLeading],
-            attributes: attribute,
-            context: nil
-        )
-        return size.width
     }
 }

@@ -8,20 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		0513C19E86118D1204430D3191F8A71F /* Pods-EFKeyboardToolBar_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 92F0B31F95FC06D2750A9890803397BF /* Pods-EFKeyboardToolBar_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0CE518BC525AFB0BD41189FF0552238D /* EFKeyboardToolBar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 00D528921218246BBE4448A1CC0A91D5 /* EFKeyboardToolBar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		25B64F71F1DC239336195FCC943EA1B7 /* DispatchQueue+EFKeyboardToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED16D0FBF8DE126CC5E51562C722667E /* DispatchQueue+EFKeyboardToolBar.swift */; };
-		2B21BCD186ED8B64FBEAF658D5D13CEC /* NSObject+EFKeyboardToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFADA288867F94FB059B3709249411F /* NSObject+EFKeyboardToolBar.swift */; };
+		2D5D4B0828EFBF3501BD5752EF887E5C /* EFKeyboardToolBar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D99CAE096EE305A251F59623B146DDA1 /* EFKeyboardToolBar-dummy.m */; };
 		36E12E1BA40AB5518F6DCCC414CB5C66 /* Pods-EFKeyboardToolBar_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F684CFAD30187A6C9DE99233245668F4 /* Pods-EFKeyboardToolBar_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		43E74B85E3368C0A418A7B6ED5BA75B8 /* UITextView+EFKeyboardToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B08D102D49ECBFFDF12F3CCD217822E /* UITextView+EFKeyboardToolBar.swift */; };
 		478850036A557429CB60C004203B6424 /* Pods-EFKeyboardToolBar_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 682DAD37C2DADBA53113EB9A0406F04F /* Pods-EFKeyboardToolBar_Tests-dummy.m */; };
 		5640DDEF9600D7C398F046B164B8938A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		5AA7B7D8A33C99F31AF47373B7A318A9 /* UITextView+EFKeyboardToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFACA2E1CB08D67DA66F36BA823F780 /* UITextView+EFKeyboardToolBar.swift */; };
-		8D525057196FEE43FDA7EBA76F734D04 /* EFKeyboardToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF908F4E75FDC015067DF74D41FE5D1D /* EFKeyboardToolBar.swift */; };
-		A689F221BCEBDA992DE20F46A7B6A77E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		5DB0146332DB224AEAC8651BD31E7D52 /* EFKeyboardToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764BB26979ED6B3769E7F4C856556B21 /* EFKeyboardToolBar.swift */; };
+		5EC1E7592EA20E22B96656900F231D5D /* String+EFKeyboardToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA4C7B59696626E547ED1F37E7750BC /* String+EFKeyboardToolBar.swift */; };
+		784028CA38AD7C9CF228C93141D4B48D /* DispatchQueue+EFKeyboardToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16879FAD481312298A8A4561377CF117 /* DispatchQueue+EFKeyboardToolBar.swift */; };
 		AA3C11B2EBEFA901E5F298E0410AFD51 /* Pods-EFKeyboardToolBar_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F5AC6515206E6033189B6785701F09C6 /* Pods-EFKeyboardToolBar_Example-dummy.m */; };
-		CB14AB85C228472B37E95CA277609CCB /* EFKeyboardToolBar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 749C2B3311A70C8077A867479DE0210C /* EFKeyboardToolBar-dummy.m */; };
+		AED31BC319265716D071FA7B5D6E9ED7 /* UISearchBar+EFKeyboardToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79122FF6B4E261E4998A9CA6E917EB7 /* UISearchBar+EFKeyboardToolBar.swift */; };
 		DC7E13E29A7337FD532D92E8B5A8BCFD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		E3623A7F0FDA10F6E5BCD717B78CC4A6 /* UISearchBar+EFKeyboardToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C06B6695172BD11488216A6786DB6E9 /* UISearchBar+EFKeyboardToolBar.swift */; };
-		E4A03090002B3351735585E0BAAC773F /* UITextField+EFKeyboardToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3CF04B73829F987EA3E9903A7A06BE /* UITextField+EFKeyboardToolBar.swift */; };
+		DD9811C97F01462D26838586D395C8A7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		E8DB2ADF5B4F3D0F14C4DC596B05F344 /* EFKeyboardToolBar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F7AE9BD73D23407E91AFA834DC9C86DB /* EFKeyboardToolBar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EDBD3AFDEFCBE72C6E10A738365BF55C /* NSObject+EFKeyboardToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D649FD70EBFD6059821327B2495E18 /* NSObject+EFKeyboardToolBar.swift */; };
+		F0A45F188D47CAC1BC76F0277C07B449 /* UITextField+EFKeyboardToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03764C57170766B0688004067C3F0AE7 /* UITextField+EFKeyboardToolBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +30,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A7E3DEB217714B994B4D9D6C4D6FD550;
+			remoteGlobalIDString = 6E5F9FCC6240EF6EBE64850870A7E5F8;
 			remoteInfo = EFKeyboardToolBar;
 		};
 		8D2E446E7B5F5B07FFE981DEAFD7B838 /* PBXContainerItemProxy */ = {
@@ -42,46 +43,47 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00D528921218246BBE4448A1CC0A91D5 /* EFKeyboardToolBar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EFKeyboardToolBar-umbrella.h"; sourceTree = "<group>"; };
+		03764C57170766B0688004067C3F0AE7 /* UITextField+EFKeyboardToolBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITextField+EFKeyboardToolBar.swift"; path = "EFKeyboardToolBar/Classes/UITextField+EFKeyboardToolBar.swift"; sourceTree = "<group>"; };
 		0DE1C6F9E1F1E0397923FEEC5D7F17D5 /* Pods-EFKeyboardToolBar_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EFKeyboardToolBar_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		0E3CF04B73829F987EA3E9903A7A06BE /* UITextField+EFKeyboardToolBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITextField+EFKeyboardToolBar.swift"; path = "EFKeyboardToolBar/Classes/UITextField+EFKeyboardToolBar.swift"; sourceTree = "<group>"; };
-		0F2B15DD60BFD3E6457788F7A77A768E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10292E554A4D382A4F12C81FA99DF022 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16879FAD481312298A8A4561377CF117 /* DispatchQueue+EFKeyboardToolBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+EFKeyboardToolBar.swift"; path = "EFKeyboardToolBar/Classes/DispatchQueue+EFKeyboardToolBar.swift"; sourceTree = "<group>"; };
 		176161AA93F1303D2FACB266CD6F609D /* Pods-EFKeyboardToolBar_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EFKeyboardToolBar_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		1D5A1FA8A917212F136F082ECB5550E2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		2171AFC6C86CED19C5050C0FCD817D22 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		21DB5C8F7DF4243F7B054EE0EA3D149B /* Pods-EFKeyboardToolBar_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EFKeyboardToolBar_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		221698F0F68EA67DEBD638E8BCECBF9B /* Pods-EFKeyboardToolBar_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-EFKeyboardToolBar_Tests.modulemap"; sourceTree = "<group>"; };
 		22FE94FCF88A286486514F459576AFB7 /* Pods_EFKeyboardToolBar_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EFKeyboardToolBar_Tests.framework; path = "Pods-EFKeyboardToolBar_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C06B6695172BD11488216A6786DB6E9 /* UISearchBar+EFKeyboardToolBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UISearchBar+EFKeyboardToolBar.swift"; path = "EFKeyboardToolBar/Classes/UISearchBar+EFKeyboardToolBar.swift"; sourceTree = "<group>"; };
-		3A529F62F45B4508DDC87066DBAC33B8 /* EFKeyboardToolBar.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = EFKeyboardToolBar.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		29A35BE881D0DD58AEBF85ED6309E800 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E222F4B52FDBAF083B96E66E1EFC39A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		47F5C9A6024A12AD9406BBE177DE879B /* Pods-EFKeyboardToolBar_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EFKeyboardToolBar_Example.release.xcconfig"; sourceTree = "<group>"; };
 		4A54383DB124D0F608B76D7822EE060E /* Pods-EFKeyboardToolBar_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EFKeyboardToolBar_Example-resources.sh"; sourceTree = "<group>"; };
-		4CFADA288867F94FB059B3709249411F /* NSObject+EFKeyboardToolBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSObject+EFKeyboardToolBar.swift"; path = "EFKeyboardToolBar/Classes/NSObject+EFKeyboardToolBar.swift"; sourceTree = "<group>"; };
+		4A56D4131F6F24BE9FFDEF70A1A222C4 /* EFKeyboardToolBar.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EFKeyboardToolBar.xcconfig; sourceTree = "<group>"; };
 		524FE3B0232424A17D64AFC98177DE64 /* Pods_EFKeyboardToolBar_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EFKeyboardToolBar_Example.framework; path = "Pods-EFKeyboardToolBar_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		593465EEC6376BBE33F53C908907A4C4 /* Pods-EFKeyboardToolBar_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EFKeyboardToolBar_Tests-resources.sh"; sourceTree = "<group>"; };
 		64AD01BA605A24F0E96B59AD50A72FA4 /* Pods-EFKeyboardToolBar_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EFKeyboardToolBar_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		682DAD37C2DADBA53113EB9A0406F04F /* Pods-EFKeyboardToolBar_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EFKeyboardToolBar_Tests-dummy.m"; sourceTree = "<group>"; };
-		749C2B3311A70C8077A867479DE0210C /* EFKeyboardToolBar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EFKeyboardToolBar-dummy.m"; sourceTree = "<group>"; };
-		88BD093532E2F992F5C034BBC8DA82DD /* EFKeyboardToolBar.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EFKeyboardToolBar.xcconfig; sourceTree = "<group>"; };
+		74B49BFFFB179972B4000B8AFC0AE668 /* EFKeyboardToolBar.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = EFKeyboardToolBar.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		764BB26979ED6B3769E7F4C856556B21 /* EFKeyboardToolBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFKeyboardToolBar.swift; path = EFKeyboardToolBar/Classes/EFKeyboardToolBar.swift; sourceTree = "<group>"; };
 		92F0B31F95FC06D2750A9890803397BF /* Pods-EFKeyboardToolBar_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EFKeyboardToolBar_Example-umbrella.h"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9AFACA2E1CB08D67DA66F36BA823F780 /* UITextView+EFKeyboardToolBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITextView+EFKeyboardToolBar.swift"; path = "EFKeyboardToolBar/Classes/UITextView+EFKeyboardToolBar.swift"; sourceTree = "<group>"; };
+		9AA4C7B59696626E547ED1F37E7750BC /* String+EFKeyboardToolBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+EFKeyboardToolBar.swift"; path = "EFKeyboardToolBar/Classes/String+EFKeyboardToolBar.swift"; sourceTree = "<group>"; };
+		9B08D102D49ECBFFDF12F3CCD217822E /* UITextView+EFKeyboardToolBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITextView+EFKeyboardToolBar.swift"; path = "EFKeyboardToolBar/Classes/UITextView+EFKeyboardToolBar.swift"; sourceTree = "<group>"; };
 		A080280BE6979A2B5C78A0033C6CB295 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD8E1E0104897B3B65FCE002153059BD /* Pods-EFKeyboardToolBar_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EFKeyboardToolBar_Example-frameworks.sh"; sourceTree = "<group>"; };
-		BBCB1C528D7753638BB47053FEDBABF3 /* EFKeyboardToolBar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EFKeyboardToolBar-prefix.pch"; sourceTree = "<group>"; };
+		BF36CB71567EA4FEAE4BE8486630D27B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		C4525B79DD7FF3587D9DF75153601CEA /* Pods-EFKeyboardToolBar_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EFKeyboardToolBar_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		C6D649FD70EBFD6059821327B2495E18 /* NSObject+EFKeyboardToolBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSObject+EFKeyboardToolBar.swift"; path = "EFKeyboardToolBar/Classes/NSObject+EFKeyboardToolBar.swift"; sourceTree = "<group>"; };
+		C79122FF6B4E261E4998A9CA6E917EB7 /* UISearchBar+EFKeyboardToolBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UISearchBar+EFKeyboardToolBar.swift"; path = "EFKeyboardToolBar/Classes/UISearchBar+EFKeyboardToolBar.swift"; sourceTree = "<group>"; };
+		CA142C47EA69D82354D482A110212A2C /* EFKeyboardToolBar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EFKeyboardToolBar-prefix.pch"; sourceTree = "<group>"; };
 		CAF9893EA17A296D92E20B5806548D5A /* EFKeyboardToolBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = EFKeyboardToolBar.framework; path = EFKeyboardToolBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD52AA045BC2B07DBCC6569D07EA3284 /* EFKeyboardToolBar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = EFKeyboardToolBar.modulemap; sourceTree = "<group>"; };
-		CF908F4E75FDC015067DF74D41FE5D1D /* EFKeyboardToolBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFKeyboardToolBar.swift; path = EFKeyboardToolBar/Classes/EFKeyboardToolBar.swift; sourceTree = "<group>"; };
+		D99CAE096EE305A251F59623B146DDA1 /* EFKeyboardToolBar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EFKeyboardToolBar-dummy.m"; sourceTree = "<group>"; };
 		D9E6B14536D9DBA94B86DFB011069345 /* Pods-EFKeyboardToolBar_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EFKeyboardToolBar_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		EAA2AA3A15C97D1444F592E326DA198C /* Pods-EFKeyboardToolBar_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EFKeyboardToolBar_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		ED16D0FBF8DE126CC5E51562C722667E /* DispatchQueue+EFKeyboardToolBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+EFKeyboardToolBar.swift"; path = "EFKeyboardToolBar/Classes/DispatchQueue+EFKeyboardToolBar.swift"; sourceTree = "<group>"; };
 		F24C8A0E909D3E2E86900F252797ECF9 /* Pods-EFKeyboardToolBar_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-EFKeyboardToolBar_Example.modulemap"; sourceTree = "<group>"; };
 		F5AC6515206E6033189B6785701F09C6 /* Pods-EFKeyboardToolBar_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EFKeyboardToolBar_Example-dummy.m"; sourceTree = "<group>"; };
 		F684CFAD30187A6C9DE99233245668F4 /* Pods-EFKeyboardToolBar_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EFKeyboardToolBar_Tests-umbrella.h"; sourceTree = "<group>"; };
 		F6D75921D535012530BDBB05B15AB90D /* Pods-EFKeyboardToolBar_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EFKeyboardToolBar_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		F7AE9BD73D23407E91AFA834DC9C86DB /* EFKeyboardToolBar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EFKeyboardToolBar-umbrella.h"; sourceTree = "<group>"; };
+		FCFACE91B8AC6331ECABCB9EDB406D4A /* EFKeyboardToolBar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = EFKeyboardToolBar.modulemap; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,11 +95,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7173881E42C219327890B48D11E51A7E /* Frameworks */ = {
+		7852F885794163EF3A66066E5FC2EEBD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A689F221BCEBDA992DE20F46A7B6A77E /* Foundation.framework in Frameworks */,
+				DD9811C97F01462D26838586D395C8A7 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +121,28 @@
 				7A4FFD3A8BFAE1360156D254579ACD8F /* Pods-EFKeyboardToolBar_Tests */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		102E0BB2B37AE100DDDCD3A1000CEAFC /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7BD990AC9CA7B74BC8EFEEC4EDF2F606 /* EFKeyboardToolBar */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		34A5D5C731E4D5E0598987A341829D7F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FCFACE91B8AC6331ECABCB9EDB406D4A /* EFKeyboardToolBar.modulemap */,
+				4A56D4131F6F24BE9FFDEF70A1A222C4 /* EFKeyboardToolBar.xcconfig */,
+				D99CAE096EE305A251F59623B146DDA1 /* EFKeyboardToolBar-dummy.m */,
+				CA142C47EA69D82354D482A110212A2C /* EFKeyboardToolBar-prefix.pch */,
+				F7AE9BD73D23407E91AFA834DC9C86DB /* EFKeyboardToolBar-umbrella.h */,
+				29A35BE881D0DD58AEBF85ED6309E800 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/EFKeyboardToolBar";
 			sourceTree = "<group>";
 		};
 		4B4EFCDA8F64470CCD0C70339DEFC57E /* Products */ = {
@@ -149,31 +173,32 @@
 			path = "Target Support Files/Pods-EFKeyboardToolBar_Tests";
 			sourceTree = "<group>";
 		};
+		7BD990AC9CA7B74BC8EFEEC4EDF2F606 /* EFKeyboardToolBar */ = {
+			isa = PBXGroup;
+			children = (
+				16879FAD481312298A8A4561377CF117 /* DispatchQueue+EFKeyboardToolBar.swift */,
+				764BB26979ED6B3769E7F4C856556B21 /* EFKeyboardToolBar.swift */,
+				C6D649FD70EBFD6059821327B2495E18 /* NSObject+EFKeyboardToolBar.swift */,
+				9AA4C7B59696626E547ED1F37E7750BC /* String+EFKeyboardToolBar.swift */,
+				C79122FF6B4E261E4998A9CA6E917EB7 /* UISearchBar+EFKeyboardToolBar.swift */,
+				03764C57170766B0688004067C3F0AE7 /* UITextField+EFKeyboardToolBar.swift */,
+				9B08D102D49ECBFFDF12F3CCD217822E /* UITextView+EFKeyboardToolBar.swift */,
+				DEA77F82587FA5C3D2E355727C1AAEB6 /* Pod */,
+				34A5D5C731E4D5E0598987A341829D7F /* Support Files */,
+			);
+			name = EFKeyboardToolBar;
+			path = ../..;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				E7671041A4F1026CB2F96D0A3A7F3E17 /* Development Pods */,
+				102E0BB2B37AE100DDDCD3A1000CEAFC /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				4B4EFCDA8F64470CCD0C70339DEFC57E /* Products */,
 				100DF8BF984A4963C93A95CC338ECD0D /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		8B0C8788E67FD72B5BF24098F51E1C9C /* EFKeyboardToolBar */ = {
-			isa = PBXGroup;
-			children = (
-				ED16D0FBF8DE126CC5E51562C722667E /* DispatchQueue+EFKeyboardToolBar.swift */,
-				CF908F4E75FDC015067DF74D41FE5D1D /* EFKeyboardToolBar.swift */,
-				4CFADA288867F94FB059B3709249411F /* NSObject+EFKeyboardToolBar.swift */,
-				2C06B6695172BD11488216A6786DB6E9 /* UISearchBar+EFKeyboardToolBar.swift */,
-				0E3CF04B73829F987EA3E9903A7A06BE /* UITextField+EFKeyboardToolBar.swift */,
-				9AFACA2E1CB08D67DA66F36BA823F780 /* UITextView+EFKeyboardToolBar.swift */,
-				A39296111D1BC3B38534F03DF559EF65 /* Pod */,
-				C9277F2BAC7A966C62B6CBB6B189D96D /* Support Files */,
-			);
-			name = EFKeyboardToolBar;
-			path = ../..;
 			sourceTree = "<group>";
 		};
 		97561899BA2BA1AC2460988BDD874030 /* Pods-EFKeyboardToolBar_Example */ = {
@@ -194,36 +219,12 @@
 			path = "Target Support Files/Pods-EFKeyboardToolBar_Example";
 			sourceTree = "<group>";
 		};
-		A39296111D1BC3B38534F03DF559EF65 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				3A529F62F45B4508DDC87066DBAC33B8 /* EFKeyboardToolBar.podspec */,
-				2171AFC6C86CED19C5050C0FCD817D22 /* LICENSE */,
-				1D5A1FA8A917212F136F082ECB5550E2 /* README.md */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C9277F2BAC7A966C62B6CBB6B189D96D /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				CD52AA045BC2B07DBCC6569D07EA3284 /* EFKeyboardToolBar.modulemap */,
-				88BD093532E2F992F5C034BBC8DA82DD /* EFKeyboardToolBar.xcconfig */,
-				749C2B3311A70C8077A867479DE0210C /* EFKeyboardToolBar-dummy.m */,
-				BBCB1C528D7753638BB47053FEDBABF3 /* EFKeyboardToolBar-prefix.pch */,
-				00D528921218246BBE4448A1CC0A91D5 /* EFKeyboardToolBar-umbrella.h */,
-				0F2B15DD60BFD3E6457788F7A77A768E /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/EFKeyboardToolBar";
 			sourceTree = "<group>";
 		};
 		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
@@ -234,12 +235,14 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		E7671041A4F1026CB2F96D0A3A7F3E17 /* Development Pods */ = {
+		DEA77F82587FA5C3D2E355727C1AAEB6 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				8B0C8788E67FD72B5BF24098F51E1C9C /* EFKeyboardToolBar */,
+				74B49BFFFB179972B4000B8AFC0AE668 /* EFKeyboardToolBar.podspec */,
+				2E222F4B52FDBAF083B96E66E1EFC39A /* LICENSE */,
+				BF36CB71567EA4FEAE4BE8486630D27B /* README.md */,
 			);
-			name = "Development Pods";
+			name = Pod;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,17 +264,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E89ADF3C88D466AFBADA85F6EEF4F41F /* Headers */ = {
+		B380085857741E45A83C96DF3077A380 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CE518BC525AFB0BD41189FF0552238D /* EFKeyboardToolBar-umbrella.h in Headers */,
+				E8DB2ADF5B4F3D0F14C4DC596B05F344 /* EFKeyboardToolBar-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		6E5F9FCC6240EF6EBE64850870A7E5F8 /* EFKeyboardToolBar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E439C97A6F679D7BC8A3C1CC7B00568 /* Build configuration list for PBXNativeTarget "EFKeyboardToolBar" */;
+			buildPhases = (
+				9B9AF9DCA298385E4C51BFD6732095CF /* Sources */,
+				7852F885794163EF3A66066E5FC2EEBD /* Frameworks */,
+				B380085857741E45A83C96DF3077A380 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EFKeyboardToolBar;
+			productName = EFKeyboardToolBar;
+			productReference = CAF9893EA17A296D92E20B5806548D5A /* EFKeyboardToolBar.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		7F3904D7BD09B087692E92B1A6E07544 /* Pods-EFKeyboardToolBar_Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6669015483F6B4A61BF55F3DB2425353 /* Build configuration list for PBXNativeTarget "Pods-EFKeyboardToolBar_Example" */;
@@ -308,23 +328,6 @@
 			productReference = 22FE94FCF88A286486514F459576AFB7 /* Pods_EFKeyboardToolBar_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		A7E3DEB217714B994B4D9D6C4D6FD550 /* EFKeyboardToolBar */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 41A970879845089BCAA8D3E88A9AC1A7 /* Build configuration list for PBXNativeTarget "EFKeyboardToolBar" */;
-			buildPhases = (
-				7BA6CAF3FAAD743AE6560133AC4912A4 /* Sources */,
-				7173881E42C219327890B48D11E51A7E /* Frameworks */,
-				E89ADF3C88D466AFBADA85F6EEF4F41F /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = EFKeyboardToolBar;
-			productName = EFKeyboardToolBar;
-			productReference = CAF9893EA17A296D92E20B5806548D5A /* EFKeyboardToolBar.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -346,7 +349,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A7E3DEB217714B994B4D9D6C4D6FD550 /* EFKeyboardToolBar */,
+				6E5F9FCC6240EF6EBE64850870A7E5F8 /* EFKeyboardToolBar */,
 				7F3904D7BD09B087692E92B1A6E07544 /* Pods-EFKeyboardToolBar_Example */,
 				919FA18D5A51B30C64D43B5A1BBB47A5 /* Pods-EFKeyboardToolBar_Tests */,
 			);
@@ -362,17 +365,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7BA6CAF3FAAD743AE6560133AC4912A4 /* Sources */ = {
+		9B9AF9DCA298385E4C51BFD6732095CF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25B64F71F1DC239336195FCC943EA1B7 /* DispatchQueue+EFKeyboardToolBar.swift in Sources */,
-				CB14AB85C228472B37E95CA277609CCB /* EFKeyboardToolBar-dummy.m in Sources */,
-				8D525057196FEE43FDA7EBA76F734D04 /* EFKeyboardToolBar.swift in Sources */,
-				2B21BCD186ED8B64FBEAF658D5D13CEC /* NSObject+EFKeyboardToolBar.swift in Sources */,
-				E3623A7F0FDA10F6E5BCD717B78CC4A6 /* UISearchBar+EFKeyboardToolBar.swift in Sources */,
-				E4A03090002B3351735585E0BAAC773F /* UITextField+EFKeyboardToolBar.swift in Sources */,
-				5AA7B7D8A33C99F31AF47373B7A318A9 /* UITextView+EFKeyboardToolBar.swift in Sources */,
+				784028CA38AD7C9CF228C93141D4B48D /* DispatchQueue+EFKeyboardToolBar.swift in Sources */,
+				2D5D4B0828EFBF3501BD5752EF887E5C /* EFKeyboardToolBar-dummy.m in Sources */,
+				5DB0146332DB224AEAC8651BD31E7D52 /* EFKeyboardToolBar.swift in Sources */,
+				EDBD3AFDEFCBE72C6E10A738365BF55C /* NSObject+EFKeyboardToolBar.swift in Sources */,
+				5EC1E7592EA20E22B96656900F231D5D /* String+EFKeyboardToolBar.swift in Sources */,
+				AED31BC319265716D071FA7B5D6E9ED7 /* UISearchBar+EFKeyboardToolBar.swift in Sources */,
+				F0A45F188D47CAC1BC76F0277C07B449 /* UITextField+EFKeyboardToolBar.swift in Sources */,
+				43E74B85E3368C0A418A7B6ED5BA75B8 /* UITextView+EFKeyboardToolBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,7 +394,7 @@
 		82C012DDF791B27DD05589B0DF222823 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = EFKeyboardToolBar;
-			target = A7E3DEB217714B994B4D9D6C4D6FD550 /* EFKeyboardToolBar */;
+			target = 6E5F9FCC6240EF6EBE64850870A7E5F8 /* EFKeyboardToolBar */;
 			targetProxy = 0604ACE5675B7B5845F50FB704458EAE /* PBXContainerItemProxy */;
 		};
 		FF900FB817F5FB90694909E21C7AC06E /* PBXTargetDependency */ = {
@@ -402,75 +406,7 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		2F8140626068A074A7ADDC234CA874FA /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 88BD093532E2F992F5C034BBC8DA82DD /* EFKeyboardToolBar.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/EFKeyboardToolBar/EFKeyboardToolBar-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/EFKeyboardToolBar/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/EFKeyboardToolBar/EFKeyboardToolBar.modulemap";
-				PRODUCT_MODULE_NAME = EFKeyboardToolBar;
-				PRODUCT_NAME = EFKeyboardToolBar;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		32647E4ABAE25A142120A9B3BBF3702D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 47F5C9A6024A12AD9406BBE177DE879B /* Pods-EFKeyboardToolBar_Example.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-EFKeyboardToolBar_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-EFKeyboardToolBar_Example/Pods-EFKeyboardToolBar_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		8B33C5230DE4A9DFA6D8F46505DD7AF7 /* Debug */ = {
+		1EE19F5DD95931924296F637BF18BD8F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -523,7 +459,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -533,9 +469,9 @@
 			};
 			name = Debug;
 		};
-		B1A97F3152909FEDC9794845C5254C10 /* Debug */ = {
+		448257CB0E01A019BE98F6DA813E3597 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 88BD093532E2F992F5C034BBC8DA82DD /* EFKeyboardToolBar.xcconfig */;
+			baseConfigurationReference = 4A56D4131F6F24BE9FFDEF70A1A222C4 /* EFKeyboardToolBar.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -565,7 +501,177 @@
 			};
 			name = Debug;
 		};
-		B42B54097A876E8A982CBF5DAA91B1AB /* Release */ = {
+		4E29E15C6115B6716F86EF7E69D8527D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 176161AA93F1303D2FACB266CD6F609D /* Pods-EFKeyboardToolBar_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-EFKeyboardToolBar_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EFKeyboardToolBar_Example/Pods-EFKeyboardToolBar_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5FC6D8E0C8A50F6AC152E3D710645BBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4525B79DD7FF3587D9DF75153601CEA /* Pods-EFKeyboardToolBar_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-EFKeyboardToolBar_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EFKeyboardToolBar_Tests/Pods-EFKeyboardToolBar_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9043B18B1EF6F3D9AD556FBB33CC944C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47F5C9A6024A12AD9406BBE177DE879B /* Pods-EFKeyboardToolBar_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-EFKeyboardToolBar_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EFKeyboardToolBar_Example/Pods-EFKeyboardToolBar_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BF324CC49B72F509CD0E45E170B38D71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DE1C6F9E1F1E0397923FEEC5D7F17D5 /* Pods-EFKeyboardToolBar_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-EFKeyboardToolBar_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EFKeyboardToolBar_Tests/Pods-EFKeyboardToolBar_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E0B26668669D9752578F70412DC580C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A56D4131F6F24BE9FFDEF70A1A222C4 /* EFKeyboardToolBar.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/EFKeyboardToolBar/EFKeyboardToolBar-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/EFKeyboardToolBar/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/EFKeyboardToolBar/EFKeyboardToolBar.modulemap";
+				PRODUCT_MODULE_NAME = EFKeyboardToolBar;
+				PRODUCT_NAME = EFKeyboardToolBar;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F4568DEE257655D290C2B9CEAB37C934 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -615,113 +721,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
-		D6E3B63518D0383BE177446476BE8FA8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 176161AA93F1303D2FACB266CD6F609D /* Pods-EFKeyboardToolBar_Example.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-EFKeyboardToolBar_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-EFKeyboardToolBar_Example/Pods-EFKeyboardToolBar_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		D785F86999274880EF980151E947033D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0DE1C6F9E1F1E0397923FEEC5D7F17D5 /* Pods-EFKeyboardToolBar_Tests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-EFKeyboardToolBar_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-EFKeyboardToolBar_Tests/Pods-EFKeyboardToolBar_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		F93E2DA96CB2D12C92D0903F09FDB444 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C4525B79DD7FF3587D9DF75153601CEA /* Pods-EFKeyboardToolBar_Tests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-EFKeyboardToolBar_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-EFKeyboardToolBar_Tests/Pods-EFKeyboardToolBar_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -731,17 +735,8 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8B33C5230DE4A9DFA6D8F46505DD7AF7 /* Debug */,
-				B42B54097A876E8A982CBF5DAA91B1AB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		41A970879845089BCAA8D3E88A9AC1A7 /* Build configuration list for PBXNativeTarget "EFKeyboardToolBar" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B1A97F3152909FEDC9794845C5254C10 /* Debug */,
-				2F8140626068A074A7ADDC234CA874FA /* Release */,
+				1EE19F5DD95931924296F637BF18BD8F /* Debug */,
+				F4568DEE257655D290C2B9CEAB37C934 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -749,8 +744,17 @@
 		4E1071E69A078F88B994F2F0AE1D2248 /* Build configuration list for PBXNativeTarget "Pods-EFKeyboardToolBar_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D785F86999274880EF980151E947033D /* Debug */,
-				F93E2DA96CB2D12C92D0903F09FDB444 /* Release */,
+				BF324CC49B72F509CD0E45E170B38D71 /* Debug */,
+				5FC6D8E0C8A50F6AC152E3D710645BBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4E439C97A6F679D7BC8A3C1CC7B00568 /* Build configuration list for PBXNativeTarget "EFKeyboardToolBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				448257CB0E01A019BE98F6DA813E3597 /* Debug */,
+				E0B26668669D9752578F70412DC580C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -758,8 +762,8 @@
 		6669015483F6B4A61BF55F3DB2425353 /* Build configuration list for PBXNativeTarget "Pods-EFKeyboardToolBar_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D6E3B63518D0383BE177446476BE8FA8 /* Debug */,
-				32647E4ABAE25A142120A9B3BBF3702D /* Release */,
+				4E29E15C6115B6716F86EF7E69D8527D /* Debug */,
+				9043B18B1EF6F3D9AD556FBB33CC944C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
