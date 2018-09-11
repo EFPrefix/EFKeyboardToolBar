@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		038782F9409CB0C8C4FB3BE5 /* Pods_EFKeyboardToolBar_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6367F07082E73A210A660793 /* Pods_EFKeyboardToolBar_Example.framework */; };
+		129235032147CACE000C1C31 /* EFKeyboardToolBarCustomContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129235022147CACE000C1C31 /* EFKeyboardToolBarCustomContentView.swift */; };
 		136BFC4B2C1EA56C615041D6 /* Pods_EFKeyboardToolBar_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8407A5A681FA4A11F5C9F0D6 /* Pods_EFKeyboardToolBar_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		0600F73FAE78444175EFC912 /* EFKeyboardToolBar.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = EFKeyboardToolBar.podspec; path = ../EFKeyboardToolBar.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		129235022147CACE000C1C31 /* EFKeyboardToolBarCustomContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EFKeyboardToolBarCustomContentView.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* EFKeyboardToolBar_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EFKeyboardToolBar_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				129235022147CACE000C1C31 /* EFKeyboardToolBarCustomContentView.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -325,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				129235032147CACE000C1C31 /* EFKeyboardToolBarCustomContentView.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
