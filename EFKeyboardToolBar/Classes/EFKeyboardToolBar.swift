@@ -109,7 +109,7 @@ extension EFKeyboardToolBar {
         UISearchBar.enableEFKeyboardToolBar()
     }
 
-    static func registerKeyboardToolBarWithTextField(textField: UITextField) {
+    public static func registerKeyboardToolBarWithTextField(textField: UITextField) {
         if EFKeyboardToolBar.allRegisters == nil {
             EFKeyboardToolBar.allRegisters = NSMutableDictionary.init(capacity: 10)
         }
@@ -121,7 +121,7 @@ extension EFKeyboardToolBar {
         }
     }
 
-    static func registerKeyboardToolBarWithTextView(textView: UITextView) {
+    public static func registerKeyboardToolBarWithTextView(textView: UITextView) {
         if EFKeyboardToolBar.allRegisters == nil {
             EFKeyboardToolBar.allRegisters = NSMutableDictionary.init(capacity: 10)
         }
@@ -132,7 +132,7 @@ extension EFKeyboardToolBar {
         }
     }
 
-    static func registerKeyboardToolBarWithSearchBar(searchBar: UISearchBar) {
+    public static func registerKeyboardToolBarWithSearchBar(searchBar: UISearchBar) {
         if EFKeyboardToolBar.allRegisters == nil {
             EFKeyboardToolBar.allRegisters = NSMutableDictionary.init(capacity: 10)
         }
@@ -143,7 +143,7 @@ extension EFKeyboardToolBar {
         }
     }
 
-    static func unregisterKeyboardToolBarWithTextField(textField: UITextField) {
+    public static func unregisterKeyboardToolBarWithTextField(textField: UITextField) {
         if keyboardToolBar == nil || EFKeyboardToolBar.allRegisters?.count == 0 {
             return
         }
@@ -158,7 +158,7 @@ extension EFKeyboardToolBar {
         }
     }
 
-    static func unregisterKeyboardToolBarWithTextView(textView: UITextView) {
+    public static func unregisterKeyboardToolBarWithTextView(textView: UITextView) {
         if keyboardToolBar == nil || EFKeyboardToolBar.allRegisters?.count == 0 {
             return
         }
@@ -172,7 +172,7 @@ extension EFKeyboardToolBar {
         }
     }
 
-    static func unregisterKeyboardToolBarWithSearchBar(searchBar: UISearchBar) {
+    public static func unregisterKeyboardToolBarWithSearchBar(searchBar: UISearchBar) {
         if keyboardToolBar == nil || EFKeyboardToolBar.allRegisters?.count == 0 {
             return
         }
