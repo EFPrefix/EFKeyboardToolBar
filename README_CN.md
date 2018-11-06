@@ -1,6 +1,6 @@
 # EFKeyboardToolBar
 
-[![CI Status](https://img.shields.io/travis/EyreFree/EFKeyboardToolBar.svg?style=flat)](https://travis-ci.org/EyreFree/EFKeyboardToolBar)
+[![CI Status](https://img.shields.io/travis/EFPrefix/EFKeyboardToolBar.svg?style=flat)](https://travis-ci.org/EFPrefix/EFKeyboardToolBar)
 [![Version](https://img.shields.io/cocoapods/v/EFKeyboardToolBar.svg?style=flat)](https://cocoapods.org/pods/EFKeyboardToolBar)
 [![License](https://img.shields.io/cocoapods/l/EFKeyboardToolBar.svg?style=flat)](https://cocoapods.org/pods/EFKeyboardToolBar)
 [![Platform](https://img.shields.io/cocoapods/p/EFKeyboardToolBar.svg?style=flat)](https://cocoapods.org/pods/EFKeyboardToolBar)
@@ -13,7 +13,7 @@ EFKeyboardToolBar 是一个 Swift 编写的键盘工具条，受 [KeyboardToolBa
 
 | 默认 | 自定义 |
 |:---------------------:|:---------------------:|
-![](https://github.com/EyreFree/EFKeyboardToolBar/blob/master/Assets/default.png?raw=true)|![](https://github.com/EyreFree/EFKeyboardToolBar/blob/master/Assets/custom.png?raw=true)   
+![](https://github.com/EFPrefix/EFKeyboardToolBar/blob/master/Assets/default.png?raw=true)|![](https://github.com/EFPrefix/EFKeyboardToolBar/blob/master/Assets/custom.png?raw=true)   
 
 ## 示例
 
@@ -24,7 +24,7 @@ EFKeyboardToolBar 是一个 Swift 编写的键盘工具条，受 [KeyboardToolBa
 或执行以下命令：
 
 ```bash
-git clone git@github.com:EyreFree/EFKeyboardToolBar.git; cd EFKeyboardToolBar/Example; pod install; open EFKeyboardToolBar.xcworkspace
+git clone git@github.com:EFPrefix/EFKeyboardToolBar.git; cd EFKeyboardToolBar/Example; pod install; open EFKeyboardToolBar.xcworkspace
 ```
 
 ## 环境
