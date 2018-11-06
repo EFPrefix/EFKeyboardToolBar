@@ -33,7 +33,7 @@ public class EFKeyboardToolBarCustomContentView: UIView, EFKeyboardToolBarConten
 
         let toolBarTextField = UITextField.init(frame: CGRect(x: 0, y: 0, width: scrollViewWidth, height: scrollViewHeight))
         toolBarTextField.textAlignment = NSTextAlignment.left
-        toolBarTextField.contentVerticalAlignment = UIControlContentVerticalAlignment.center
+        toolBarTextField.contentVerticalAlignment = UIControl.ContentVerticalAlignment.center
         toolBarTextField.isUserInteractionEnabled = false
         scrollView.addSubview(toolBarTextField)
         self.toolBarTextField = toolBarTextField

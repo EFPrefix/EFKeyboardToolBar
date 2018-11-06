@@ -115,8 +115,8 @@ extension EFKeyboardToolBar {
         }
         if textField.inputAccessoryView != keyboardToolBar {
             textField.inputAccessoryView = keyboardToolBar
-            textField.addTarget(keyboardToolBar, action: #selector(textFieldDidBeginWithTextField(textField:)), for: UIControlEvents.editingDidBegin)
-            textField.addTarget(keyboardToolBar, action: #selector(textFieldDidChangeWithTextField(textField:)), for: UIControlEvents.editingChanged)
+            textField.addTarget(keyboardToolBar, action: #selector(textFieldDidBeginWithTextField(textField:)), for: UIControl.Event.editingDidBegin)
+            textField.addTarget(keyboardToolBar, action: #selector(textFieldDidChangeWithTextField(textField:)), for: UIControl.Event.editingChanged)
             EFKeyboardToolBar.allRegisters?.setValue(textField, forKey: String(format: "%p", arguments: [textField]))
         }
     }
@@ -149,8 +149,8 @@ extension EFKeyboardToolBar {
         }
         let tempTextField = EFKeyboardToolBar.allRegisters?.object(forKey: String(format: "%p", arguments: [textField])) as? UITextField
         tempTextField?.inputAccessoryView = nil
-        tempTextField?.removeTarget(keyboardToolBar, action: #selector(textFieldDidBeginWithTextField(textField:)), for: UIControlEvents.editingDidBegin)
-        tempTextField?.removeTarget(keyboardToolBar, action: #selector(textFieldDidChangeWithTextField(textField:)), for: UIControlEvents.editingChanged)
+        tempTextField?.removeTarget(keyboardToolBar, action: #selector(textFieldDidBeginWithTextField(textField:)), for: UIControl.Event.editingDidBegin)
+        tempTextField?.removeTarget(keyboardToolBar, action: #selector(textFieldDidChangeWithTextField(textField:)), for: UIControl.Event.editingChanged)
         EFKeyboardToolBar.allRegisters?.removeObject(forKey: String(format: "%p", arguments: [textField]))
         if EFKeyboardToolBar.allRegisters?.count == 0 {
             EFKeyboardToolBar.allRegisters = nil
