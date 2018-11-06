@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'EFKeyboardToolBar'
-  s.version          = '1.0.1'
+  s.version          = '1.1.0'
   s.summary          = 'A keyboard toolBar in Swift.'
 
   s.description      = <<-DESC
@@ -15,16 +15,6 @@ A keyboard toolBar in Swift, inspired by KeyboardToolBar.
   s.social_media_url = 'https://twitter.com/EyreFree777'
 
   s.ios.deployment_target = '8.0'
-
   s.requires_arc = true
-
   s.source_files = 'EFKeyboardToolBar/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'EFKeyboardToolBar' => ['EFKeyboardToolBar/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end

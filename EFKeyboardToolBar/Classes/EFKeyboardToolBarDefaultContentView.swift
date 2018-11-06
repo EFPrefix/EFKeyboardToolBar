@@ -102,7 +102,7 @@ public class EFKeyboardToolBarDefaultContentView: UIView, EFKeyboardToolBarConte
 
     public func toolBarItems() -> [UIBarButtonItem] {
         let textFieldItem: UIBarButtonItem = UIBarButtonItem(customView: self)
-        let finishBtnItem: UIBarButtonItem = UIBarButtonItem(title: "完成", style: UIBarButtonItemStyle.done, target: self, action: #selector(resignKeyboard))
+        let finishBtnItem: UIBarButtonItem = UIBarButtonItem(title: "完成", style: UIBarButtonItem.Style.done, target: self, action: #selector(resignKeyboard))
 
         return [textFieldItem, finishBtnItem]
     }

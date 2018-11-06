@@ -57,7 +57,7 @@ class ViewController: UIViewController {
         textField.makeVisible()
         textField.textColor = UIColor.blue
         textField.attributedPlaceholder = NSAttributedString(
-            string: "出来吧，小火龙！", attributes: [NSAttributedStringKey.foregroundColor : UIColor.lightGray]
+            string: "出来吧，小火龙！", attributes: [NSAttributedString.Key.foregroundColor : UIColor.lightGray]
         )
         textField.frame = CGRect(x: padding, y: buttonCustom.frame.maxY + padding, width: ctrlWidth, height: 100)
         self.view.addSubview(textField)
