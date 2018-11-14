@@ -4,6 +4,7 @@
 [![Version](https://img.shields.io/cocoapods/v/EFKeyboardToolBar.svg?style=flat)](https://cocoapods.org/pods/EFKeyboardToolBar)
 [![License](https://img.shields.io/cocoapods/l/EFKeyboardToolBar.svg?style=flat)](https://cocoapods.org/pods/EFKeyboardToolBar)
 [![Platform](https://img.shields.io/cocoapods/p/EFKeyboardToolBar.svg?style=flat)](https://cocoapods.org/pods/EFKeyboardToolBar)
+[![QQ Group](http://image.eyrefree.org/QQGroup.png)](http://shang.qq.com/wpa/qunwpa?idkey=d0f732585dcb0c6f2eb26bc9e0327f6305d18260eeba89ed26a201b520c572c0)
 
 EFKeyboardToolBar 是一个 Swift 编写的键盘工具条，受 [KeyboardToolBar](https://github.com/Jiar/KeyboardToolBar) 启发。
 
