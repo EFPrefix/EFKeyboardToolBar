@@ -59,7 +59,7 @@ public extension UITextField {
         return object
     }
 
-    public func addInputAccessoryView_UITextField() {
+    func addInputAccessoryView_UITextField() {
         EFKeyboardToolBar.registerKeyboardToolBarWithTextField(textField: self)
     }
 }
